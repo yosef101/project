@@ -1,0 +1,539 @@
+@font-face {
+  font-family: 'poppins';
+  src: url('../fonts/poppins/Poppins-Bold.woff2');
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: 'poppins';
+  src: url('../fonts/poppins/Poppins-Medium.woff2');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'poppins';
+  src: url('../fonts/poppins/Poppins-Regular.woff2');
+  font-weight: 500;
+}
+*{
+  margin: 0px;
+  font-family: 'poppins' , sans-serif;
+  color: rgba(0, 170, 255, 0.718);
+}
+:root {
+  --primary-color:rgba(70, 100, 250, 0.879); ;
+  --secondary-color: #F7F7F7;
+  --dark-color: #000;
+  --light-color: #fff;
+  --gray-color: #808080;
+  --filter-white: invert(100%) sepia(100%) saturate(0%) hue-rotate(314deg) brightness(107%) contrast(106%);
+  --filter-blue:  invert(66%) sepia(100%) saturate(344%) hue-rotate(133deg) brightness(87%) contrast(91%);
+}
+ul {
+  padding: 0px;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+.general-section {
+  width: 100%;
+  padding: 90px 0px;
+  position: relative;
+  z-index: 9;
+}
+
+.heading {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.container {
+  width: 90%;
+  margin: 0px auto;
+}
+.flex-data {
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+.general-section {
+  width: 100%;
+  padding: 90px 0px;
+  position: relative;
+  z-index: 9;
+}
+.navbar {
+  width: 100%;
+  padding: 20px 0px;
+  background-color: var(--primary-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.navbar .contain {
+  width: 100%;
+  justify-content: space-between;
+}
+
+.navbar .contain .brand-name {
+  font-size: 30px;
+  font-weight: 900;
+  color: var(--light-color);
+  text-transform: capitalize;
+}
+
+.navbar .contain .navbar-nav {
+  
+  gap: 20px;
+ 
+}
+
+.navbar .contain .navbar-nav .nav-item a {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--light-color);
+  text-transform: capitalize;
+  position: relative;
+  z-index: 9;
+}
+.navbar .contain .navbar-nav .nav-item a::after{
+  content: '';
+  
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: yellow;
+}
+.navbar .contain .navbar-nav .nav-item a:hover::after{
+  width: 100%;
+  background-color: yellow;
+}
+
+.navbar .contain .navbar-nav .nav-item a:hover {
+  color: yellow;
+}
+.header {
+  width: 100%;
+  padding: 350px 0px 150px;
+  background: url('../images/header/header.webp') center / cover no-repeat;
+  position: relative;
+  z-index: 9;
+}
+
+.header::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .7);
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.header .contain {
+  width: 50%;
+  padding: 200px 0px 150px;
+  text-align: center;
+  margin: 0px auto;
+  justify-content: center;
+}
+
+.header .contain h1 {
+  font-size: 45px;
+  font-weight: 900;
+  color: var(--light-color);
+  text-transform: capitalize;
+  margin-bottom: 30px;
+}
+.header .contain .header-icon{
+  
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  gap: 10px;
+
+}
+.header .contain .header-icon .icon{
+  width: 70px;
+  height: 70px;
+  border: 1px;
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 35px;
+  padding: auto;
+}
+.header .contain .header-icon .icon:hover{
+  background-color: white;
+}
+.header .contain .header-icon .icon .list-item img{
+  width: 40px;
+  height: 50px;
+  filter: var(--filter-white);
+  text-align: center;
+  padding: 10px 0;
+  
+}
+.header .contain .header-icon .icon:hover .list-item img{
+  filter: var(--filter-blue);
+}
+.header .contain .button-header{
+  text-align: center;
+  margin: 20px 0px;
+  background-color: rgba(255, 255, 255, 0);
+  color: var(--gray-color);
+  border: 1px solid var(--gray-color);
+  border-radius: 15px;
+  width: 120px;
+  text-transform: capitalize;
+  position: relative;
+  z-index: 9;
+}
+.header .contain .button-header::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 0%;
+  background-color: var(--primary-color);
+  top: 0;
+  left: 0;
+  z-index: 8;
+  opacity: .4;
+  transition: height .4s;
+}
+.header .contain .button-header:hover::after{
+  height: 100%;
+  border-radius: 15px;
+}
+.about-us .heading{
+  flex-direction: column;
+  text-align: center;
+}
+.about-us .heading h1{
+  font-size: 25px;
+  font-weight: 900;
+  color: var(--primary-color);
+  text-transform: capitalize;
+}
+
+.about-us .heading p{
+  width: 50%;
+  margin: auto;
+  font-family: 500;
+  color: var(--gray-color);
+}
+.section3{
+  width: 100%;
+  height: 150px;
+  position: relative;
+  z-index: 9;
+  background: url('../images/section3/counter.webp') center / cover no-repeat;
+}
+.section3::after{
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-color: #000000d1;
+  top: 0;
+  left: 0;
+}
+
+.section3 .contain{
+  width: 100%;
+  margin: 20px 40px;
+  gap: 150px;
+  justify-content: center;
+ 
+}
+.section3 .contain .items{
+  flex-direction: column;
+  gap: 15px;
+}
+.section3 .contain .items .img-item{
+  background-color: var(--primary-color);
+  width: 50px;
+  height: 50px;
+  border: 1px solid var(--primary-color);
+  border-radius: 25px;
+  justify-content: center;
+}
+.section3 .contain .items:hover .img-item {
+  background-color: var(--light-color);
+  border: 1px solid var(--light-color);
+  
+}
+.section3 .contain .items .img-item img{
+  filter: var(--filter-white);
+  width: 30px;
+  height: 30px;
+}
+
+.section3 .contain .items:hover .img-item img{
+  filter: var(--filter-blue);
+}
+
+.section3 .contain .items h1{
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--light-color);
+}
+.section3 .contain .items p{
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--secondary-color);
+}
+.section3 .contain .items:hover h1{
+  color: var(--primary-color);
+}
+
+.why-chose-us{
+  width: 100%;
+}
+.why-chose-us h1{
+  font-size: 25px;
+  font-weight: 700;
+  text-align: center;
+  color: var(--primary-color);
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+.why-chose-us .contain{
+ width: 100%;
+ margin: 0px 50px;
+ gap: 60px;
+ justify-content: center;
+}
+
+.why-chose-us .contain .paragraph1{
+  width: 40%;
+}
+.why-chose-us .contain .paragraph1 p{
+  text-align: start;
+  color: var(--gray-color);
+  
+}
+
+.why-chose-us .contain .paragraph2 .p1{
+  width: 100%;
+  color: var(--gray-color);
+  text-align: start;
+}
+.why-chose-us .contain .all{
+ width: 40%;
+ flex-direction: column;
+ gap: 20px;
+}
+.why-chose-us .contain .all .paragraph2{
+  width: 100%;
+  position: relative;
+  z-index: 9;
+  
+}
+.why-chose-us .contain .all .paragraph2 .p1::after{
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  
+  height: 7px;
+  left: 0;
+  background-color: var(--gray-color);
+  bottom: -5;
+}
+.footer.container{
+    text-align: center;
+    width: 100%;
+    margin-bottom: 15x;
+}
+.account-form {
+  margin-top: 55px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+label {
+  color: white;
+  display: block;
+  margin-top: 30px;
+  font-family: "Epilogue", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+input {
+  display: block;
+  width: 550px;
+  margin: 0 auto;
+  background-color: #f0f3ff;
+  color: #666666;
+  padding: 15px;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  outline: none;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+input:hover {
+  background-color: white;
+}
+
+input:focus {
+  cursor: text;
+  color: #303030;
+  background-color: white;
+  border-color: #303030;
+}
+
+input[type="submit"] {
+  display: block;
+  color: white;
+  background-color: black;
+  font-family: "Epilogue", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 40px;
+}
+
+input[type="submit"]:hover {
+  color: black;
+  background-color: #31C7D5;
+}
+
+#account-extra {
+  font-family: "Epilogue", sans-serif;
+  color: white;
+  margin-top: 30px;
+}
+
+#account-extra a {
+  color: white;
+  text-decoration: none;
+  font-weight: 900;
+}
+.wrapper {
+  font-family: 'raleway';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #fafafa;
+}
+
+.wrapper h1 {
+  font-size: 3em;
+  margin: 25px 0;
+  text-align: center;
+  font-weight: 500;
+}
+
+.content-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 1000px;
+  margin-top: 30px;
+}
+
+.card {
+  min-height: 220px;
+  width: 320px;
+  padding: 30px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #fff;
+  margin: 10px 4px;
+  box-shadow: 0px 15px 50px rgba(0, 0, 0, 0.2);
+}
+
+.card i {
+  margin: 20px;
+  color: #ff5724;
+}
+
+.card h2 {
+  margin-bottom: 12px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.card p {
+  color: #6c757d;
+  text-align: center;
+}
+
+.card:hover {}
+
+.card:hover i,
+.card:hover p {
+  color: #fff
+}
+
+.card:hover h2 {
+  font-weight: 500;
+  color: #f2f2f2;
+}
+
+.card:nth-child(1):hover {
+  background: linear-gradient(45deg, rgba(255, 28, 8, 0, 7) 0%, rgba(255, 0, 82, 0, 7) 100%), url('file:///E:/Html%20Web%20Design%20Codes/The%20Coffee%20Store/ourservices.html');
+  background-size: cover;
+}
+
+.card:nth-child(2):hover {
+  background: linear-gradient(45deg, rgba(255, 28, 8, 0, 7) 0%, rgba(255, 0, 82, 0, 7) 100%), url('file:///E:/Html%20Web%20Design%20Codes/The%20Coffee%20Store/ourservices.html');
+  background-size: cover;
+}
+
+.card:nth-child(3):hover {
+  background: linear-gradient(45deg, rgba(255, 28, 8, 0, 7) 0%, rgba(255, 0, 82, 0, 7) 100%), url('file:///E:/Html%20Web%20Design%20Codes/The%20Coffee%20Store/ourservices.html');
+  background-size: cover;
+}
+
+.card:nth-child(4):hover {
+  background: linear-gradient(45deg, rgba(255, 28, 8, 0, 7) 0%, rgba(255, 0, 82, 0, 7) 100%), url('file:///E:/Html%20Web%20Design%20Codes/The%20Coffee%20Store/ourservices.html');
+  background-size: cover;
+}
+
+.card:nth-child(5):hover {
+  background: linear-gradient(45deg, rgba(255, 28, 8, 0, 7) 0%, rgba(255, 0, 82, 0, 7) 100%), url('file:///E:/Html%20Web%20Design%20Codes/The%20Coffee%20Store/ourservices.html');
+  background-size: cover;
+}
+
+.card:nth-child(6):hover {
+  background: linear-gradient(45deg, rgba(255, 28, 8, 0, 7) 0%, rgba(255, 0, 82, 0, 7) 100%), url('file:///E:/Html%20Web%20Design%20Codes/The%20Coffee%20Store/my%20color.png');
+  background-size: cover;
+  /***Responsive****/
+  @media (max-width: 991px) {
+    .wrapper {
+      padding:25px;
+    }
+    .wrapper h1 {
+      font-size: 2.5em;
+      font-weight: 600;
+    }
+    .content-box {
+      flex-direction: column;
+      width: 100%;
+    }
+    .card {
+      min-width: 300px;
+      margin: 10px auto;
+    }
+  }
+
